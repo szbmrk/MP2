@@ -116,6 +116,7 @@ public int CompareTo(OsztalyNeve other)
 ```
 ---
 ### `IEnumerable<T>`
+Segítségével betudjuk járni a konténerosztály listájának elemeit a kivánt módon.
 ```csharp
 public class KontenerOsztalyNeve : IEnumerable<OsztalyNeve>
 {
@@ -153,7 +154,7 @@ public class KontenerOsztalyNeve : IEnumerable<OsztalyNeve>
 {
     private List<OsztalyNeve> lista = new List<OsztalyNeve>();
 
-    public OsztalyNeve MaxValmiAlapjan()
+    public OsztalyNeve MaxValamiAlapjan()
     {
         return lista.MaxBy(x => x.Property1);
         // min ugyanígy csak MinBy
@@ -247,7 +248,7 @@ első módszer -> saját kivétel osztály létrehozása
 ```csharp
 public class SajatKivetel : Exception
 {
-    public SajatKivetel() : () { }
+    public SajatKivetel() : base() { }
     public SajatKivetel(string uzenet) : base(uzenet) { }
 }
 ```
@@ -279,7 +280,7 @@ StreamReader sr = new StreamReader("fajl.txt");
 ```
 
  ```csharp
-StreamReader sr = null; // null-ra inicializáljuk, hogy a finally blokkban tudjuk zárni
+StreamReader sr = null; // try blokkon kívül deklaráljuk, hogy finallyban tudjuk zárni
 try
 {
     sr = new StreamReader("fajl.txt");
