@@ -67,8 +67,8 @@ public string Mezo
 ```csharp
 public OsztalyNeve(string mezo, string mezo2) 
 { 
-    Mezo = mezo;
-     Mezo2 = mezo2; 
+    Mezo = mezo; // a Mezo itt a propertyre mutat
+    Mezo2 = mezo2; 
 }
 ```
 Előző konstruktor meghívása
