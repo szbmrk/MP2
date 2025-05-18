@@ -116,7 +116,7 @@ public int CompareTo(OsztalyNeve other)
 ```
 ---
 ### `IEnumerable<T>`
-Segítségével betudjuk járni a konténerosztály listájának elemeit a kivánt módon.
+Segítségével betudjuk járni a konténerosztályt egy kivánt módon.
 ```csharp
 public class KontenerOsztalyNeve : IEnumerable<OsztalyNeve>
 {
